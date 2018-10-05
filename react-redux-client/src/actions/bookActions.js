@@ -3,12 +3,14 @@
 const apiUrl = "/api/book/";
 
 export const toggleAddBook = () => {
+  console.log('toggle book from bookactions');
   return {
-    type: 'TOGGLE_ADD_TODO'
+    type: 'TOGGLE_ADD_BOOK'
   }
 }
 
 export const addNewBook = (book) => {
+  console.log('Add new book');
   console.log(book);
   return (dispatch) => {
     dispatch(addNewBookRequest(book));

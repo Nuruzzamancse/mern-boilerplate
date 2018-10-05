@@ -23,7 +23,7 @@ export default class App extends React.Component {
 
   toggleAddBook(e){
     e.preventDefault();
-     this.props.mappedToggleAddTodo();
+     this.props.mappedToggleAddBook();
   }
 
   addTodo(e){
@@ -46,6 +46,7 @@ export default class App extends React.Component {
   }
 
   addBook(e){
+    console.log('Here add book');
     e.preventDefault();
     const form = document.getElementById('addBookForm');
     if(form.bookText.value !== ""  && form.bookDesc.value !== ""){
@@ -56,7 +57,7 @@ export default class App extends React.Component {
       //   todoText: form.todoText.value,
       //   todoDesc: form.todoDesc.value
       // }
-      this.props.mappedAddTodo(data);
+      this.props.mappedAddBook(data);
     form.reset();
     }
     else{

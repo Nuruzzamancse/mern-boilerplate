@@ -9,12 +9,16 @@ const appReducer = (currentState = INITIAL_STATE, action) => {
           return {
             ...currentState,showAddTodo: !currentState.showAddTodo
           }
-
-
+      case 'TOGGLE_ADD_BOOK':
+          return {
+            ...currentState,showAddTodo: !currentState.showAddTodo
+          }
     default:
        return currentState;
 
   }
 }
+
+
 
 export default appReducer;
