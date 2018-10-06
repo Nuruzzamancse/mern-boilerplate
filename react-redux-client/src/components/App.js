@@ -58,6 +58,9 @@ export default class App extends React.Component {
       <LinkContainer to={{ pathname: '/', query: {  } }} onClick={this.toggleAddTodo}>
          <NavItem eventKey={1}>Add Todo</NavItem>
       </LinkContainer>
+      <LinkContainer to={{ pathname: '/', query: {  } }} onClick={this.toggleAddBook}>
+         <NavItem eventKey={1}>Add Book</NavItem>
+      </LinkContainer>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
