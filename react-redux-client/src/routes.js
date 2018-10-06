@@ -18,10 +18,3 @@ export default (
     <Route path='/books/:id' component={Book}/>
   </Switch>
 )
-
-  // <Route path="/" component={App}>
-     {/* <IndexRoute component={Todos} />
-     <Route path="/:id" component={Todo} /> */}
-     {/* <Route path="/book" component={Books} />
-     <Route path="/:id" component={Book} />
-  </Route> */}

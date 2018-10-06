@@ -30,6 +30,7 @@
     "express-busboy": "^6.0.1",
     "mongoose": "^4.11.7",
     "morgan": "^1.8.2",
+    "nodemon": "^1.18.4",
     "source-map-support": "^0.4.16"
   }
 }

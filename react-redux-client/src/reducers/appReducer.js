@@ -1,6 +1,7 @@
 // ./react-redux-client/src/reducers/appReducer.js
 const INITIAL_STATE = {
-  showAddTodo: false
+  showAddTodo: false,
+  showAddBook: false
 }
 
 const appReducer = (currentState = INITIAL_STATE, action) => {
@@ -11,7 +12,7 @@ const appReducer = (currentState = INITIAL_STATE, action) => {
           }
       case 'TOGGLE_ADD_BOOK':
           return {
-            ...currentState,showAddTodo: !currentState.showAddTodo
+            ...currentState,showAddBook: !currentState.showAddBook
           }
     default:
        return currentState;

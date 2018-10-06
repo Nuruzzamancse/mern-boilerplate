@@ -4,7 +4,7 @@ import { Navbar,Nav,NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './App.css';
 import TodoForm from './TodoForm';
-import NameForm from './Name';
+import BooForm from './BookForm';
 
 export default class App extends React.Component {
   constructor(props){
@@ -46,9 +46,10 @@ export default class App extends React.Component {
   }
 
   addBook(e){
-    console.log('Here add book');
     e.preventDefault();
     const form = document.getElementById('addBookForm');
+    console.log(form);
+    
     if(form.bookText.value !== ""  && form.bookDesc.value !== ""){
       const data = new FormData();
      data.append('bookText', form.bookText.value);
@@ -96,9 +97,11 @@ export default class App extends React.Component {
   {appState.showAddTodo &&
     <TodoForm addTodo={this.addTodo} />
   }
+  {appState.showAddBook &&
+    <BooForm addBook={this.addBook} />
+  }
   { /* Each Smaller Components */}
-   {this.props.children}
-   <NameForm/>
+   {/* {this.props.children} */}
   </div>
  </div>
     );
