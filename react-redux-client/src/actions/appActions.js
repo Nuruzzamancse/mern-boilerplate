@@ -5,3 +5,9 @@ export const toggleAddTodo = () => {
     type: 'TOGGLE_ADD_TODO'
   }
 }
+
+export const toggleAddBook = () => {
+  return {
+    type: 'TOGGLE_ADD_BOOK'
+  }
+}

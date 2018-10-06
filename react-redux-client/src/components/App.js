@@ -10,10 +10,18 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.toggleAddTodo = this.toggleAddTodo.bind(this);
+    this.toggleAddBook = this.toggleAddBook.bind(this);
+
     this.addTodo = this.addTodo.bind(this);
+    this.addBook = this.addBook.bind(this);
   }
 
   toggleAddTodo(e){
+    e.preventDefault();
+     this.props.mappedToggleAddTodo();
+  }
+
+  toggleAddBook(e){
     e.preventDefault();
      this.props.mappedToggleAddTodo();
   }
@@ -36,6 +44,25 @@ export default class App extends React.Component {
         return ;
       }
   }
+
+  addBook(e){
+    e.preventDefault();
+    const form = document.getElementById('addBookForm');
+    if(form.bookText.value !== ""  && form.bookDesc.value !== ""){
+      const data = new FormData();
+     data.append('bookText', form.bookText.value);
+      data.append('bookDesc', form.bookDesc.value);
+      // const data = {
+      //   todoText: form.todoText.value,
+      //   todoDesc: form.todoDesc.value
+      // }
+      this.props.mappedAddTodo(data);
+    form.reset();
+    }
+    else{
+      return ;
+    }
+}
 
   render(){
     const appState = this.props.mappedAppState;
